@@ -54,4 +54,20 @@ router.post('/comment/update/:id', function(req, res, next) {
   res.redirect('/users/comment');
 })
 
+router.post('/comment/login', function(req, res, next) {
+  if (!req.body.username) {
+    res.redirect('/users/comment');
+    return;
+  }
+  req.session.username = req.body.username;
+  req.session.logined = true;
+  res.redirect('/users/comment');
+});
+
+router.get('/comment/logout', function(req, res, next) {
+  req.session.logined = false;
+  req.session.username = '';
+  res.redirect('/users/comment');
+});
+
 module.exports = router;

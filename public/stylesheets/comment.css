@@ -17,3 +17,8 @@ body {
 .date, .ip {
   text-align: right;
 }
+
+.logout {
+  position: fixed;
+  right: 0;
+}

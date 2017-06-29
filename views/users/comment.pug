@@ -4,7 +4,20 @@ head
   title Comment
   link(rel="stylesheet", href="/stylesheets/comment.css", type="text/css")
 body
+  if logined
+    .logout
+      span= username
+      a(href='/apis/comment/logout')
+        button logout
+  else
+    form(name='login', action='/apis/comment/login', method='post')
+      p
+        span Name: 
+        input(type='text', name='username')
+        input(type='submit', value='login')
+
   h1 Comment
+  h2= userIP
   for comment in comments
     .message-container
       
@@ -23,7 +36,7 @@ body
     h1 write something
     p
       span Name: 
-      input(type='text', name='Visitor')
+      input(type='text', name='Visitor', value=username)
     p
       textarea(name='Comment')
     p
