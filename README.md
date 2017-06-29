@@ -2,4 +2,7 @@
 a simple message board
 
 - need a mongodb which domain name is mongo
-![hi](http://imgur.com/a/SO1Z5)
+
+zzz
+![](public/images/snapshot.png)
+![Alt text](/../master/public/images/snapshot.png?raw=true "Optional Title")
