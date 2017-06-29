@@ -1,0 +1,13 @@
+doctype html
+html
+  title modify
+body
+  h1 modify
+  form(name='modify', action='/apis/comment/update/'+comment.id, method='post')
+    p 
+      span Name: 
+      input(type='text', name='Visitor', value=comment.Visitor)
+    p
+      textarea(name='Comment') #{comment.Comment}
+    p
+      input(type='submit', name='submit')

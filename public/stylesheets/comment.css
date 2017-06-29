@@ -1,0 +1,19 @@
+body {
+  color: gray;
+}
+.message-container {
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px;
+  width: 500px;
+}
+
+.context {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.date, .ip {
+  text-align: right;
+}

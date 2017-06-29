@@ -1,0 +1,30 @@
+doctype html  
+html
+head
+  title Comment
+  link(rel="stylesheet", href="/stylesheets/comment.css", type="text/css")
+body
+  h1 Comment
+  for comment in comments
+    .message-container
+      
+      .name= comment.Visitor
+      .context= comment.Comment
+      .operation 
+        a(href='/users/comment/modify/'+comment.id)
+          button EDIT
+        a(href='/apis/comment/delete/'+comment.id)
+          button DELETE
+      .date= comment.CreateDate
+      .ip= comment.IP
+  hr
+
+  form(name='add', action='/apis/comment', method='post')
+    h1 write something
+    p
+      span Name: 
+      input(type='text', name='Visitor')
+    p
+      textarea(name='Comment')
+    p
+      input(type='submit', name='submit')
